@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environments
+.env
+.env*
+pyvenv.cfg
+venv
+
+# Yarn
+node_modules
+
+# Serverless
+.serverless/
+.serverless-wsgi
+serverless_wsgi.py
+wsgi_handler.py
+
+# Editors
+*.swp
+*.vscode
+.DS_Store
+
+# Secrets
+secrets/secrets-guild-dev.json
+secrets/secrets-guild-staging.json
+secrets/secrets-guild-prod.json
+*pkey.json
+
+# CLI input/output for direct invoking
+invoke.json
+response.json
+
+# DB Dumps
+*.dump
+
+# Idea
+.idea/dataSources.xml
+
+# ignore all Idea files except run config
+.idea/*
+!.idea/runConfigurations/
+
+# Test coverage
+.coverage
+coverage.xml
+htmlcov
+
+
+logfile
+.hypothesis/

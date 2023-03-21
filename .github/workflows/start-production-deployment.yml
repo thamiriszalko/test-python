@@ -1,0 +1,24 @@
+name: Start production deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      continue_check:
+        description: Type "CONTINUE" to proceed with the production deployment
+        required: true
+
+jobs:
+  sync-branch:
+    name: Syncing branches
+    runs-on: ubuntu-latest
+    if: github.event.inputs.continue_check == 'CONTINUE'
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v3
+        with:
+          ref: main
+      - name: Syncing production with main
+        run: |
+          git fetch origin production 
+          git pull
+          git push origin main:production
