@@ -17,8 +17,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: main
+          fetch-depth: 2
       - name: Syncing production with main
         run: |
-          git fetch origin production 
-          git pull
+          git pull 
           git push origin main:production
